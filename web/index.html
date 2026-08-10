@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>School Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =======================
+         HEADER
+    ======================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            School Management System
+        </div>
+
+    </header>
+
+
+    <!-- =======================
+         NAVBAR / SIDEBAR
+    ======================= -->
+
+    <nav class="navbar">
+
+        <a href="#">Dashboard</a>
+        <a href="#">Alunos</a>
+        <a href="#">Professores</a>
+        <a href="#">Turmas</a>
+
+    </nav>
+
+
+    <!-- =======================
+         CONTENT
+    ======================= -->
+
+    <section id="content" class="content">
+
+        <header class="content-header">
+
+            <div>
+                <h1>Dashboard</h1>
+
+                <p>
+                    Visão geral do sistema de gerenciamento escolar.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- =======================
+             CARDS
+        ======================= -->
+
+        <section class="cards">
+
+            <!-- ALUNOS -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Total de Alunos
+                </div>
+
+                <div class="card-content">
+
+                    <strong>1.250</strong>
+
+                    <span>
+                        Alunos cadastrados
+                    </span>
+
+                    <button
+                        class="button"
+                        onclick="mostrarAlunos()">
+                        Ver alunos
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFESSORES -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Total de Professores
+                </div>
+
+                <div class="card-content">
+
+                    <strong>85</strong>
+
+                    <span>
+                        Professores cadastrados
+                    </span>
+
+                    <button
+                        class="button"
+                        onclick="mostrarProfessores()">
+                        Ver professores
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TURMAS -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Turmas Ativas
+                </div>
+
+                <div class="card-content">
+
+                    <strong>42</strong>
+
+                    <span>
+                        Turmas em andamento
+                    </span>
+
+                    <button
+                        class="button"
+                        onclick="mostrarTurmas()">
+                        Ver turmas
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FREQUÊNCIA -->
+
+            <div class="card">
+
+                <div class="card-title">
+                    Taxa de Frequência
+                </div>
+
+                <div class="card-content">
+
+                    <strong>94%</strong>
+
+                    <span>
+                        Frequência média
+                    </span>
+
+                    <button
+                        class="button"
+                        onclick="mostrarFrequencia()">
+                        Ver frequência
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =======================
+             DASHBOARD PANELS
+        ======================= -->
+
+        <section class="dashboard-panels">
+
+
+            <!-- ATIVIDADES -->
+
+            <div class="panel activities">
+
+                <h2>
+                    Atividades Recentes
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Novo aluno cadastrado
+                    </li>
+
+                    <li>
+                        Professor atualizado no sistema
+                    </li>
+
+                    <li>
+                        Nova turma criada
+                    </li>
+
+                    <li>
+                        Frequência atualizada
+                    </li>
+
+                </ul>
+
+                <button
+                    class="button"
+                    onclick="mostrarAtividades()">
+
+                    Ver atividades
+
+                </button>
+
+            </div>
+
+
+            <!-- AVISOS -->
+
+            <div class="panel notifications">
+
+                <h2>
+                    Avisos Importantes
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Reunião pedagógica amanhã
+                    </li>
+
+                    <li>
+                        Prazo para lançamento de notas
+                    </li>
+
+                    <li>
+                        Atualização do calendário escolar
+                    </li>
+
+                    <li>
+                        Manutenção do sistema programada
+                    </li>
+
+                </ul>
+
+                <button
+                    class="button"
+                    onclick="mostrarAvisos()">
+
+                    Ver avisos
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =======================
+         JAVASCRIPT
+    ======================= -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
