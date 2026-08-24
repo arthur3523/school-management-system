@@ -1,198 +1,536 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gerenciamento Escolar</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="School Management System - Sistema de gerenciamento escolar."
+    >
+
+    <title>School Management System</title>
+
+
+    <!-- =======================
+         GOOGLE FONTS - POPPINS
+    ======================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =======================
+         FONT AWESOME
+    ======================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =======================
+         FAVICON
+    ======================== -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="assets/images/sms-logo-header.svg"
+    >
+
+
+    <!-- =======================
+         CSS
+    ======================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
+
 <body>
+
     <div class="container">
-        <!-- Menu Lateral de Navegação -->
-        <aside class="sidebar">
-            <h2>Escola Sys</h2>
-            <nav>
+
+
+        <!-- =======================
+             HEADER
+        ======================== -->
+
+        <header id="header" class="header">
+
+            <section class="logo">
+
+                <img
+                    src="assets/images/sms-logo-header.svg"
+                    alt="Logo School Management System"
+                >
+
+            </section>
+
+
+            <section class="header-title">
+
+                <h1>
+                    School Management System
+                </h1>
+
+            </section>
+
+
+            <section class="user-profile">
+
+                <p>
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Usuário
+
+                </p>
+
+            </section>
+
+        </header>
+
+
+
+        <!-- =======================
+             NAVBAR
+        ======================== -->
+
+        <nav id="navbar" class="navbar">
+
+            <ul class="menu">
+
+                <li class="menu-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Início
+
+                </li>
+
+
+                <li class="menu-item">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Alunos
+
+                </li>
+
+
+                <li class="menu-item">
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                    Professores
+
+                </li>
+
+
+                <li class="menu-item">
+
+                    <i class="fa-solid fa-users-rectangle"></i>
+
+                    Turmas
+
+                </li>
+
+
+                <li class="menu-item">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Frequência
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+        <!-- =======================
+             MAIN
+        ======================== -->
+
+        <main id="main" class="main">
+
+
+            <!-- =======================
+                 SIDEBAR
+            ======================== -->
+
+            <aside id="sidebar" class="sidebar">
+
+                <h2>
+                    Menu
+                </h2>
+
+
                 <ul>
-                    <li><button id="nav-dashboard" class="nav-btn active">Dashboard / Estatísticas</button></li>
-                    <li><button id="nav-alunos" class="nav-btn">Alunos</button></li>
-                    <li><button id="nav-professores" class="nav-btn">Professores</button></li>
-                    <li><button id="nav-faltas" class="nav-btn">Faltas</button></li>
+
+                    <li>
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Alunos
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-chalkboard-user"></i>
+
+                        Professores
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-users-rectangle"></i>
+
+                        Turmas
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        Frequência
+
+                    </li>
+
                 </ul>
-            </nav>
-        </aside>
 
-        <!-- Conteúdo Principal -->
-        <main class="main-content">
-            
-            <!-- PÁGINA 1: DASHBOARD / ESTATÍSTICAS -->
-            <section id="page-dashboard" class="page-section">
-                <h1>Dashboard / Estatísticas do Sistema</h1>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h3>Total de Alunos</h3>
-                        <p id="stat-total-alunos">0</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Total de Professores</h3>
-                        <p id="stat-total-professores">0</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Total de Faltas</h3>
-                        <p id="stat-total-faltas">0</p>
-                    </div>
-                </div>
-            </section>
+            </aside>
 
-            <!-- PÁGINA 2: GERENCIAMENTO DE ALUNOS -->
-            <section id="page-alunos" class="page-section hidden">
-                <h1>Gerenciamento de Alunos</h1>
-                
-                <!-- Formulário de Cadastro -->
-                <div class="card">
-                    <h2>Cadastrar Novo Aluno</h2>
-                    <form id="form-cadastrar-aluno">
-                        <div class="form-group">
-                            <label for="aluno-matricula">Matrícula:</label>
-                            <input type="text" id="aluno-matricula" required placeholder="Ex: A101">
+
+
+            <!-- =======================
+                 CONTENT
+            ======================== -->
+
+            <section id="content" class="content">
+
+
+                <header class="content-header">
+                        <img src="/assets/images/sms-logo-header.png" alt="">
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Visão geral do School Management System.
+                    </p>
+
+                </header>
+
+
+
+                <!-- =======================
+                     CARDS
+                ======================== -->
+
+                <section class="cards">
+
+
+                    <!-- CARD ALUNOS -->
+
+                    <article class="card">
+
+                        <h2 class="card-title">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            Total de Alunos
+
+                        </h2>
+
+
+                        <div class="card-content">
+
+                            <p>
+                                1.250
+                            </p>
+
                         </div>
-                        <div class="form-group">
-                            <label for="aluno-nome">Nome Completo:</label>
-                            <input type="text" id="aluno-nome" required placeholder="Ex: João Silva">
-                        </div>
-                        <div class="form-group">
-                            <label for="aluno-turma">Turma:</label>
-                            <input type="text" id="aluno-turma" required placeholder="Ex: 3º Ano A">
-                        </div>
-                        <button type="submit" class="btn">Cadastrar Aluno</button>
-                    </form>
-                </div>
 
-                <!-- Busca por Matrícula -->
-                <div class="card">
-                    <h2>Buscar Aluno por Matrícula</h2>
-                    <div class="search-box">
-                        <input type="text" id="busca-aluno-input" placeholder="Digite a matrícula...">
-                        <button id="btn-buscar-aluno" class="btn">Buscar</button>
-                        <button id="btn-limpar-busca-aluno" class="btn btn-secondary">Limpar</button>
-                    </div>
-                </div>
 
-                <!-- Lista de Alunos -->
-                <div class="card">
-                    <h2>Lista de Alunos</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Matrícula</th>
-                                <th>Nome</th>
-                                <th>Turma</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabela-alunos">
-                            <!-- Preenchido via JS -->
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                        <button
+                            class="button"
+                            onclick="mostrarAlunos()"
+                        >
 
-            <!-- PÁGINA 3: GERENCIAMENTO DE PROFESSORES -->
-            <section id="page-professores" class="page-section hidden">
-                <h1>Gerenciamento de Professores</h1>
-                
-                <!-- Formulário de Cadastro -->
-                <div class="card">
-                    <h2>Cadastrar Novo Professor</h2>
-                    <form id="form-cadastrar-professor">
-                        <div class="form-group">
-                            <label for="prof-id">ID do Professor:</label>
-                            <input type="text" id="prof-id" required placeholder="Ex: P201">
+                            Ver alunos
+
+                        </button>
+
+                    </article>
+
+
+
+                    <!-- CARD PROFESSORES -->
+
+                    <article class="card">
+
+                        <h2 class="card-title">
+
+                            <i class="fa-solid fa-chalkboard-user"></i>
+
+                            Total de Professores
+
+                        </h2>
+
+
+                        <div class="card-content">
+
+                            <p>
+                                85
+                            </p>
+
                         </div>
-                        <div class="form-group">
-                            <label for="prof-nome">Nome Completo:</label>
-                            <input type="text" id="prof-nome" required placeholder="Ex: Prof. Carlos">
-                        </div>
-                        <div class="form-group">
-                            <label for="prof-disciplina">Disciplina:</label>
-                            <input type="text" id="prof-disciplina" required placeholder="Ex: Matemática">
-                        </div>
-                        <button type="submit" class="btn">Cadastrar Professor</button>
-                    </form>
-                </div>
 
-                <!-- Lista de Professores -->
-                <div class="card">
-                    <h2>Lista de Professores</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nome</th>
-                                <th>Disciplina</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabela-professores">
-                            <!-- Preenchido via JS -->
-                        </tbody>
-                    </table>
-                </div>
-            </section>
 
-            <!-- PÁGINA 4: GERENCIAMENTO DE FALTAS -->
-            <section id="page-faltas" class="page-section hidden">
-                <h1>Gerenciamento de Faltas</h1>
+                        <button
+                            class="button"
+                            onclick="mostrarProfessores()"
+                        >
 
-                <!-- Registro de Faltas -->
-                <div class="card">
-                    <h2>Registrar Nova Falta</h2>
-                    <form id="form-registrar-falta">
-                        <div class="form-group">
-                            <label for="falta-matricula">Matrícula do Aluno:</label>
-                            <input type="text" id="falta-matricula" required placeholder="Ex: A101">
+                            Ver professores
+
+                        </button>
+
+                    </article>
+
+
+
+                    <!-- CARD TURMAS -->
+
+                    <article class="card">
+
+                        <h2 class="card-title">
+
+                            <i class="fa-solid fa-users-rectangle"></i>
+
+                            Turmas Ativas
+
+                        </h2>
+
+
+                        <div class="card-content">
+
+                            <p>
+                                42
+                            </p>
+
                         </div>
-                        <div class="form-group">
-                            <label for="falta-data">Data:</label>
-                            <input type="date" id="falta-data" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="falta-motivo">Motivo / Justificativa:</label>
-                            <input type="text" id="falta-motivo" placeholder="Ex: Atestado médico (Opcional)">
-                        </div>
-                        <button type="submit" class="btn">Registrar Falta</button>
-                    </form>
-                </div>
 
-                <!-- Busca de Faltas por Matrícula -->
-                <div class="card">
-                    <h2>Buscar Faltas por Matrícula</h2>
-                    <div class="search-box">
-                        <input type="text" id="busca-falta-input" placeholder="Digite a matrícula do aluno...">
-                        <button id="btn-buscar-falta" class="btn">Buscar</button>
-                        <button id="btn-limpar-busca-falta" class="btn btn-secondary">Limpar</button>
-                    </div>
-                </div>
 
-                <!-- Lista de Faltas -->
-                <div class="card">
-                    <h2>Histórico de Faltas</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Matrícula</th>
-                                <th>Nome do Aluno</th>
-                                <th>Data</th>
-                                <th>Motivo</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabela-faltas">
-                            <!-- Preenchido via JS -->
-                        </tbody>
-                    </table>
-                </div>
+                        <button
+                            class="button"
+                            onclick="mostrarTurmas()"
+                        >
+
+                            Ver turmas
+
+                        </button>
+
+                    </article>
+
+
+
+                    <!-- CARD FREQUÊNCIA -->
+
+                    <article class="card">
+
+                        <h2 class="card-title">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            Taxa de Frequência
+
+                        </h2>
+
+
+                        <div class="card-content">
+
+                            <p>
+                                94%
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="button"
+                            onclick="mostrarFrequencia()"
+                        >
+
+                            Ver frequência
+
+                        </button>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- =======================
+                     DASHBOARD PANELS
+                ======================== -->
+
+                <section class="dashboard-panels">
+
+
+                    <!-- ATIVIDADES -->
+
+                    <article class="panel activities">
+
+                        <h2>
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                            Atividades Recentes
+
+                        </h2>
+
+
+                        <ul>
+
+                            <li>
+                                Cadastro de novos alunos
+                            </li>
+
+                            <li>
+                                Atualização de turmas
+                            </li>
+
+                            <li>
+                                Registro de frequência
+                            </li>
+
+                            <li>
+                                Cadastro de professores
+                            </li>
+
+                        </ul>
+
+
+                        <button class="button">
+
+                            Ver atividades
+
+                        </button>
+
+                    </article>
+
+
+
+                    <!-- AVISOS -->
+
+                    <article class="panel notifications">
+
+                        <h2>
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            Avisos Importantes
+
+                        </h2>
+
+
+                        <ul>
+
+                            <li>
+                                Reunião pedagógica na próxima semana
+                            </li>
+
+                            <li>
+                                Atualização do sistema disponível
+                            </li>
+
+                            <li>
+                                Período de matrícula em andamento
+                            </li>
+
+                        </ul>
+
+
+                        <button class="button">
+
+                            Ver avisos
+
+                        </button>
+
+                    </article>
+
+                </section>
+
             </section>
 
         </main>
+
+
+
+        <!-- =======================
+             FOOTER
+        ======================== -->
+
+        <footer id="footer" class="footer">
+
+
+            <img
+                src="assets/images/ksl-logo-footersvg.png"
+                alt="Logo Kaizen Software Labs"
+            >
+                <img src="/assets/images/ksl-logo-footer.png" alt="">
+
+            <p>
+                School Management System - 2026
+            </p>
+
+        </footer>
+
     </div>
 
-    <script src="script.js"></script>
+
+
+    <!-- =======================
+         JAVASCRIPT
+    ======================== -->
+
+    <script src="js/app.js"></script>
+
 </body>
+
 </html>
