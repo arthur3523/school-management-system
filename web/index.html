@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -70,12 +69,15 @@
              HEADER
         ======================== -->
 
-        <header id="header" class="header">
+        <header
+            id="header"
+            class="header"
+        >
 
             <section class="logo">
 
                 <img
-                    src="assets/images/sms-logo-header.svg"
+                    src="assets/images/sms-logo-header.png"
                     alt="Logo School Management System"
                 >
 
@@ -111,20 +113,30 @@
              NAVBAR
         ======================== -->
 
-        <nav id="navbar" class="navbar">
+        <nav
+            id="navbar"
+            class="navbar"
+        >
 
             <ul class="menu">
 
-                <li class="menu-item">
+
+                <li
+                    class="menu-item"
+                    data-page="dashboard"
+                >
 
                     <i class="fa-solid fa-house"></i>
 
-                    Início
+                    Dashboard
 
                 </li>
 
 
-                <li class="menu-item">
+                <li
+                    class="menu-item"
+                    data-page="alunos"
+                >
 
                     <i class="fa-solid fa-users"></i>
 
@@ -133,7 +145,10 @@
                 </li>
 
 
-                <li class="menu-item">
+                <li
+                    class="menu-item"
+                    data-page="professores"
+                >
 
                     <i class="fa-solid fa-chalkboard-user"></i>
 
@@ -142,22 +157,29 @@
                 </li>
 
 
-                <li class="menu-item">
+                <li
+                    class="menu-item"
+                    data-page="faltas"
+                >
 
-                    <i class="fa-solid fa-users-rectangle"></i>
+                    <i class="fa-solid fa-calendar-xmark"></i>
 
-                    Turmas
+                    Faltas
+
+                </li>
+
+
+                <li
+                    class="menu-item"
+                    data-page="estatisticas"
+                >
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Estatísticas
 
                 </li>
 
-
-                <li class="menu-item">
-
-                    <i class="fa-solid fa-calendar-check"></i>
-
-                    Frequência
-
-                </li>
 
             </ul>
 
@@ -169,14 +191,20 @@
              MAIN
         ======================== -->
 
-        <main id="main" class="main">
+        <main
+            id="main"
+            class="main"
+        >
 
 
             <!-- =======================
                  SIDEBAR
             ======================== -->
 
-            <aside id="sidebar" class="sidebar">
+            <aside
+                id="sidebar"
+                class="sidebar"
+            >
 
                 <h2>
                     Menu
@@ -185,7 +213,11 @@
 
                 <ul>
 
-                    <li>
+
+                    <li
+                        class="sidebar-item"
+                        data-page="dashboard"
+                    >
 
                         <i class="fa-solid fa-house"></i>
 
@@ -194,7 +226,10 @@
                     </li>
 
 
-                    <li>
+                    <li
+                        class="sidebar-item"
+                        data-page="alunos"
+                    >
 
                         <i class="fa-solid fa-users"></i>
 
@@ -203,7 +238,10 @@
                     </li>
 
 
-                    <li>
+                    <li
+                        class="sidebar-item"
+                        data-page="professores"
+                    >
 
                         <i class="fa-solid fa-chalkboard-user"></i>
 
@@ -212,22 +250,29 @@
                     </li>
 
 
-                    <li>
+                    <li
+                        class="sidebar-item"
+                        data-page="faltas"
+                    >
 
-                        <i class="fa-solid fa-users-rectangle"></i>
+                        <i class="fa-solid fa-calendar-xmark"></i>
 
-                        Turmas
+                        Faltas
+
+                    </li>
+
+
+                    <li
+                        class="sidebar-item"
+                        data-page="estatisticas"
+                    >
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        Estatísticas
 
                     </li>
 
-
-                    <li>
-
-                        <i class="fa-solid fa-calendar-check"></i>
-
-                        Frequência
-
-                    </li>
 
                 </ul>
 
@@ -239,11 +284,21 @@
                  CONTENT
             ======================== -->
 
-            <section id="content" class="content">
+            <section
+                id="content"
+                class="content"
+            >
 
+
+                <!-- CABEÇALHO DO CONTEÚDO -->
 
                 <header class="content-header">
-                        <img src="/assets/images/sms-logo-header.png" alt="">
+
+                    <img
+                        src="assets/images/sms-logo-header.png"
+                        alt="Logo School Management System"
+                    >
+
                     <h1>
                         Dashboard
                     </h1>
@@ -287,7 +342,7 @@
 
                         <button
                             class="button"
-                            onclick="mostrarAlunos()"
+                            type="button"
                         >
 
                             Ver alunos
@@ -322,7 +377,7 @@
 
                         <button
                             class="button"
-                            onclick="mostrarProfessores()"
+                            type="button"
                         >
 
                             Ver professores
@@ -357,7 +412,7 @@
 
                         <button
                             class="button"
-                            onclick="mostrarTurmas()"
+                            type="button"
                         >
 
                             Ver turmas
@@ -392,7 +447,7 @@
 
                         <button
                             class="button"
-                            onclick="mostrarFrequencia()"
+                            type="button"
                         >
 
                             Ver frequência
@@ -400,6 +455,7 @@
                         </button>
 
                     </article>
+
 
                 </section>
 
@@ -446,7 +502,10 @@
                         </ul>
 
 
-                        <button class="button">
+                        <button
+                            class="button"
+                            type="button"
+                        >
 
                             Ver atividades
 
@@ -486,7 +545,10 @@
                         </ul>
 
 
-                        <button class="button">
+                        <button
+                            class="button"
+                            type="button"
+                        >
 
                             Ver avisos
 
@@ -494,9 +556,12 @@
 
                     </article>
 
+
                 </section>
 
+
             </section>
+
 
         </main>
 
@@ -506,20 +571,23 @@
              FOOTER
         ======================== -->
 
-        <footer id="footer" class="footer">
-
+        <footer
+            id="footer"
+            class="footer"
+        >
 
             <img
-                src="assets/images/ksl-logo-footersvg.png"
+                src="assets/images/ksl-logo-footer.png"
                 alt="Logo Kaizen Software Labs"
             >
-                <img src="/assets/images/ksl-logo-footer.png" alt="">
+
 
             <p>
                 School Management System - 2026
             </p>
 
         </footer>
+
 
     </div>
 

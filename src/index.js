@@ -27,7 +27,7 @@
 // IMPORTS
 //============================================================
 
-const readline = require("readline");
+import readline from "readline";
 
 const rl = readline.createInterface({
     input: process.stdin,
